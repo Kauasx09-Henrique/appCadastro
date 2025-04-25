@@ -6,6 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons'; // Para ícones
 import CadastroScreen from './Telas/CadastroScreens.jsx';
 import { ScrollView } from 'react-native-gesture-handler';
+import LoginScreen from './Telas/LoginScreens.jsx';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,6 +22,10 @@ export default function App() {
             tabBarIcon: () => <Ionicons name="Home" size={24} />
           }} 
         />
+                <Stack.Screen name="Login" component={LoginScreen} options={{
+                  tabBarIcon: () => <Ionicons name='' size={24}/>
+                }}
+                />
       </Tab.Navigator>
       </NavigationContainer>
       
