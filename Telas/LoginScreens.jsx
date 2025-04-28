@@ -9,6 +9,7 @@ export default function LoginScreen({ navigation }) {
   const [senha, setSenha] = useState('');
   const [mostrarSenha, setMostrarSenha] = useState(false);
 
+
   const handleLogin = async () => {
     if (!email || !senha) {
       Alert.alert('Atenção', 'Por favor, preencha todos os campos');
