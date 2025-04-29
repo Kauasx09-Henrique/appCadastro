@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, Alert, TouchableOpacity } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Button } from 'react-native-paper';
+import { Button, Avatar } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+
 
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState('');
@@ -37,6 +38,7 @@ export default function LoginScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
+      <Avatar.Image size={120} margin={25} style={styles.imagem} source={require('../assets/Avatar.icon.men.png')}></Avatar.Image>
       <Text style={styles.titulo}>Bem-vindo de volta</Text>
       <Text style={styles.subtitulo}>Faça login para continuar</Text>
 
@@ -103,6 +105,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 30,
     backgroundColor: '#f8f9fa',
+    alignItems: 'center'
   },
   titulo: {
     fontSize: 28,
@@ -175,4 +178,5 @@ const styles = StyleSheet.create({
     color: '#3498db',
     fontWeight: 'bold',
   },
+
 });
